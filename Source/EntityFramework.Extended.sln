@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.20824.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework6.Extended.NET451", "EntityFramework6.Extended.NET451\EntityFramework6.Extended.NET451.csproj", "{D390C235-242C-4E92-9E0B-D2463E87B0F0}"
 EndProject
@@ -114,6 +114,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracker.SqlCompact.NET45.Tests", "Samples\EF5\Tracker.SqlCompact.NET45.Tests\Tracker.SqlCompact.NET45.Tests.csproj", "{115EF517-FB59-404A-9BD8-BB101EEA0352}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracker.SqlCompact.NET451.Tests", "Samples\EF5\Tracker.SqlCompact.NET451.Tests\Tracker.SqlCompact.NET451.Tests.csproj", "{CEE1B45D-1873-4101-B051-6299E3324DED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF61", "EF61", "{B62CA831-C5DB-418D-A9F3-A16A75794C69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

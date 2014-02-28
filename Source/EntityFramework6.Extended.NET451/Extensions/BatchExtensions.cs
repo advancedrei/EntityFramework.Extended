@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 #if EF5
 using System.Data.Objects;
-#elif EF6
+#elif EF6 || EF61
 using System.Data.Entity.Core.Objects;
 #endif
 using EntityFramework.Batch;

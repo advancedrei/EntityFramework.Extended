@@ -3,7 +3,7 @@ using System.Collections.Generic;
 #if EF5
 using System.Data.Metadata.Edm;
 using System.Data.Objects;
-#elif EF6
+#elif EF6 || EF61
 using System.Data.Entity.Core.Metadata.Edm;
 using System.Data.Entity.Core.Objects;
 #endif
@@ -156,15 +156,22 @@ namespace EntityFramework.Mapping
 
         private static void SetProperties(EntityMap entityMap, dynamic mappingFragmentProxy)
         {
+#if EF61
+            var propertyMaps = mappingFragmentProxy.PropertyMappings;
+#else
             var propertyMaps = mappingFragmentProxy.Properties;
+#endif
             foreach (var propertyMap in propertyMaps)
             {
                 // StorageScalarPropertyMapping
                 dynamic propertyMapProxy = new DynamicProxy(propertyMap);
-
+#if EF61
+                EdmProperty modelProperty = propertyMapProxy.Property;
+                EdmProperty storeProperty = propertyMapProxy.Column;
+#else
                 EdmProperty modelProperty = propertyMapProxy.EdmProperty;
                 EdmProperty storeProperty = propertyMapProxy.ColumnProperty;
-
+#endif
                 var map = new PropertyMap
                 {
                     ColumnName = storeProperty.Name,

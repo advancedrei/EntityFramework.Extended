@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 #if EF5
 using System.Data.Objects;
-#elif EF6
+#elif EF6 || EF61
 using System.Data.Entity.Core.Objects;
 #endif
 

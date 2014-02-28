@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 #if EF5
 using System.Data.Objects;
-#elif EF6
+#elif EF6 || EF61
 using System.Data.Entity.Core.Objects;
 #endif
 using System.Diagnostics;
@@ -168,7 +168,7 @@ namespace EntityFramework.Future
 
 #if EF5
                 dynamic shaper = shaperFactory.Create(reader, dataContext, dataContext.MetadataWorkspace, MergeOption.AppendOnly, false);
-#elif EF6
+#elif EF6 || EF61
                 dynamic shaper = shaperFactory.Create(reader, dataContext, dataContext.MetadataWorkspace, MergeOption.AppendOnly, false, true, false);
 #endif
                 var list = new List<T>();

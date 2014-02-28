@@ -10,7 +10,7 @@ using System.Data.Entity.Infrastructure;
 using System.Data.Metadata.Edm;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-#elif EF6
+#elif EF6 || EF61
 using System.Data.Entity.Core.Metadata.Edm;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Core.Objects.DataClasses;

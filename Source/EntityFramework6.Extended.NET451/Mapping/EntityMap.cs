@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 #if EF5
 using System.Data.Metadata.Edm;
-#elif EF6
+#elif EF6 || EF61
 using System.Data.Entity.Core.Metadata.Edm;
 #endif
 using System.Diagnostics;

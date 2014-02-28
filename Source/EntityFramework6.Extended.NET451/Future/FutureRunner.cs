@@ -4,7 +4,7 @@ using System.Data.Common;
 #if EF5
 using System.Data.EntityClient;
 using System.Data.Objects;
-#elif EF6
+#elif EF6 || EF61
 using System.Data.Entity.Core.EntityClient;
 using System.Data.Entity.Core.Objects;
 #endif
@@ -32,7 +32,11 @@ namespace EntityFramework.Future
 
             // used to call internal methods
             dynamic contextProxy = new DynamicProxy(context);
+#if EF61
+            contextProxy.EnsureConnection(true);
+#else
             contextProxy.EnsureConnection();
+#endif
 
             try
             {

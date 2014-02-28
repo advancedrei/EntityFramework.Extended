@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>EntityFramework5.Extended</id>
-    <version>5.0.100-alpha</version>
+    <version>5.0.100</version>
     <authors>LoreSoft, AdvancedREI</authors>
     <owners>AdvancedREI</owners>
     <licenseUrl>https://github.com/AdvancedREI/EntityFramework.Extended</licenseUrl>
@@ -10,11 +10,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A library that extends the functionality of Entity Framework 5 by adding batch update, future queries and audit logs.</description>
     <summary>A library of extensions for version 5 of the Entity Framework.</summary>
-    <copyright>Copyright (C) 2012-2013, LoreSoft. Modified 2013 AdvancedREI.</copyright>
+    <copyright>Copyright (C) 2012-2013, LoreSoft. Modified 2013-2014 AdvancedREI.</copyright>
     <language>en-US</language>
     <tags>EntityFramework, EF, EF5</tags>
     <dependencies>
-      <dependency id="EntityFramework" version="5.0.0" />
+      <dependency id="EntityFramework" version="[5.0,6.0)" />
     </dependencies>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System.ComponentModel.DataAnnotations" targetFramework="" />
